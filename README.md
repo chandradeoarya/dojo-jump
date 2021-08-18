@@ -4,8 +4,8 @@
 Dojo Jump
 </h3>
 <p align="center">
- <a href="http://a8cb6034b3a534265afba1292133790f-1670941502.us-west-1.elb.amazonaws.com/" />
-  Play it now
+ <a href="http://a8cb6034b3a534265afba1292133790f-1670941502.us-west-1.elb.amazonaws.com/">
+  Play it now</a>
 </p>
 
 This is a simplified static code base of dojo jump game just using few html and javascript files. We are going to build docker image of the game using nginx as webserver and deploy using docker swarm on two nodes.
