@@ -23,3 +23,8 @@ coming soon once exam is over :D
 #### how to run on your local machine
 
 `docker run -d --name dojo-jump -p 80:80 chandradeoarya/dojo-jump:1.0.0`
+
+#### Contibutors
+
+- Chandradeo Arya
+- FirstName LastName
