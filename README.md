@@ -33,4 +33,4 @@ coming soon once exam is over :D
 #### Contibutors
 
 - Chandradeo Arya
-- FirstName LastName
+- Abdulaziz Binmozal
