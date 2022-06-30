@@ -6,7 +6,7 @@ Dojo Jump
 </h3>
 <p align="center">
  <a href="http://a639835ca735246ee841e2aecde1701c-1023464538.us-west-1.elb.amazonaws.com/">
-  Play it now</a>
+  Play it now(dead)</a>
 </p>
 
 
