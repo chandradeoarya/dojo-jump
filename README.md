@@ -43,4 +43,5 @@ coming soon once exam is over :D
 - ghada alsahli
 - Samar Ibrahim
 - raghad alharbi
+- Najwa Alshahrani
 - rawan zabidi
