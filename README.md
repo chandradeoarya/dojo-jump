@@ -38,3 +38,5 @@ coming soon once exam is over :D
 - Abdulaziz Binmozal
 - M.Algow
 - ghada alsahli
+- Samar Ibrahim
+- raghad alharbi
