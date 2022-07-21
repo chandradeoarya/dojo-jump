@@ -5,7 +5,7 @@ files:
     destination: /var/www/html/
   - source: /style.css
     destination: /var/www/html/
-  - source /main.js
+  - source: /main.js
     destination: /var/www/html/
 hooks:
   ApplicationStop:
