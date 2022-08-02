@@ -3,7 +3,7 @@ pipeline{
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('Chandra-dockerhub-token')
+		DOCKERHUB_CREDENTIALS=credentials('chandra-dockerhub')
 	}
 
 	stages {
