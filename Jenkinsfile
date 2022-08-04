@@ -3,7 +3,7 @@ pipeline{
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('ghada-dockerhub')
+		DOCKERHUB_CREDENTIALS=credentials('ghada_access')
 	}
 
 	stages {
