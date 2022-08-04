@@ -3,7 +3,7 @@ pipeline {
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('chandra-dockerhub')
+		DOCKERHUB_CREDENTIALS=credentials('ghada-dockerhub')
 		AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
    AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
 	ARTIFACT_NAME = 'Dockerrun.aws.json'
@@ -18,7 +18,7 @@ AWS_EB_APP_NAME = 'dojotest-dojojump'
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t chandradeoarya/dojo-jump:latest .'
+				sh 'docker build -t ghadamu/dojo-jump:latest .'
 			}
 		}
 
@@ -32,7 +32,7 @@ AWS_EB_APP_NAME = 'dojotest-dojojump'
 		stage('Push') {
 
 			steps {
-				sh 'docker push chandradeoarya/dojo-jump:latest'
+				sh 'docker push ghadamu/dojo-jump:latest'
 			}
 		}
 
