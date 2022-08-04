@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-      "Name": "registry.hub.docker.com/chandradeoarya/dojo-jump:latest"
+      "Name": "registry.hub.docker.com/ghadamu/dojo-jump:latest"
     },
     "Ports": [
       {
