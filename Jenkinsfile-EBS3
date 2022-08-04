@@ -4,8 +4,8 @@ pipeline {
 
 	environment {
 		DOCKERHUB_CREDENTIALS=credentials('ghada_access')
-		AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
-   AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+		AWS_ACCESS_KEY_ID     = credentials('class-jenkins-aws-secret-key-id')
+   AWS_SECRET_ACCESS_KEY = credentials('class-jenkins-aws-secret-access-key')
 	ARTIFACT_NAME = 'Dockerrun.aws.json'
 AWS_S3_BUCKET = 'dojotest-eb-docker'
 AWS_EB_APP_NAME = 'dojotest-dojojump'
