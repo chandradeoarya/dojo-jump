@@ -13,6 +13,7 @@ env:
   AWS_EB_APP_NAME: 'dojo-jump'
   AWS_EB_ENVIRONMENT_NAME: 'dojojump-docker'
   AWS_EB_APP_VERSION: v${{ github.run_number }}
+  AWS_REGION: 'us-east-1'
 
 jobs:
   build_and_push:
