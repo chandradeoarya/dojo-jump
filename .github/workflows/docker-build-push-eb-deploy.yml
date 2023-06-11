@@ -53,6 +53,10 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
+      - name: Init Elastic Beanstalk
+        run: |
+          eb init
+
       - name: Deploy to Elastic Beanstalk
         run: |
           eb deploy
