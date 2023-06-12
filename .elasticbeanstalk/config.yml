@@ -18,5 +18,5 @@ global:
   platform_version: null
   profile: null
   repository: null
-  sc: git
+  sc: git 
   workspace_type: Application
