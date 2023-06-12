@@ -43,6 +43,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          ref: gaction-eb-simple
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
