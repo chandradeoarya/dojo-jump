@@ -2,6 +2,10 @@ branch-defaults:
   gaction-eb-simple:
     environment: dojo-jump-dev
     group_suffix: null
+environment-defaults:
+  dojo-jump-dev:
+    branch: null
+    repository: null
 global:
   application_name: dojo-jump
   branch: null

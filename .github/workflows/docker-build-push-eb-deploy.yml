@@ -55,7 +55,7 @@ jobs:
 
       - name: Init Elastic Beanstalk
         run: |
-          eb init --quiet
+          echo n | eb init
 
       - name: Deploy to Elastic Beanstalk
         run: |
