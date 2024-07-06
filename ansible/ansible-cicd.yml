@@ -18,8 +18,8 @@
 
     - name: Copy simple HTML file to Nginx default directory
       copy:
-        src: index.html
-        dest: /var/www/html/index.html
+        src: {{ repo_dir }}
+        dest: /var/www/html/
         owner: www-data
         group: www-data
         mode: '0644'

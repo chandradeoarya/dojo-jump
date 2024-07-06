@@ -4,6 +4,6 @@ node1 ansible_host=54.174.230.24 ansible_user=ubuntu ansible_ssh_common_args='-o
 [all:vars]
 ansible_ssh_private_key_file=/Users/chandradeoarya/Documents/codeplatoon/cp-devops-class.pem
 repo_url=https://github.com/chandradeoarya/
-repo=goldenwaste-sda-hackathon
+repo=dojo-jump
 home_dir=/home/ubuntu
 repo_dir={{ home_dir }}/{{ repo }}
