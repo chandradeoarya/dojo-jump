@@ -17,8 +17,8 @@
         state: started
 
     - name: Remove existing contents in /var/www/html
-      command: rm -rf /var/www/*
-
+      command: rm -rf /var/www/html
+      
     - name: pull branch master
       git:
         repo: "{{ repo_url }}/{{ repo }}.git"
