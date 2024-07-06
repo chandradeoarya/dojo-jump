@@ -16,6 +16,12 @@ jobs:
       with:
         python-version: '3.10'
 
+    - name: Set up SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+
     - name: Install Ansible 
       run: pip install ansible
 
