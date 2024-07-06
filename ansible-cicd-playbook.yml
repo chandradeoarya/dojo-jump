@@ -1,0 +1,31 @@
+---
+- name: Install and configure Nginx
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Update server  package list
+      apt:
+        update_cache: yes
+    
+    - name: Update all packages
+      apt:
+        upgrade: dist
+    
+    - name: Install Nginx
+      apt:
+        name: nginx
+        enabled: yes
+        state: started
+    
+    - name: Get code from github 
+      git:
+        repo: "{{ repo_url }}/{{ repo }}.git"
+        dest: /var/www/html
+        version: cpclass-ansible-cicd
+        accept_hostkey: yes
+    
+    - name: Restart Nginx
+      systemd: 
+        name: nginx
+        state: restarted
