@@ -1,0 +1,31 @@
+name: CI/CD Pipeline
+
+on: [push]
+
+jobs:
+  env-setup:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+      
+  ssh-key:
+    - name: Set up SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa  
+        
+  ansible:
+    - name: Install Ansible
+      run: pip install ansible
+
+    - name: Set working directory
+      working-directory: /home/ubuntu/dojo-jump/ansible
+
+    - name: Run Ansible Playbook
+      run: ansible-playbook -i inventory ansible-cicd.yml

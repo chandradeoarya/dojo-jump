@@ -1,0 +1,30 @@
+---
+- name: Install and configure Nginx
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: Ensure Nginx is enabled and started
+      systemd:
+        name: nginx
+        enabled: yes
+        state: started
+
+    - name: Copy simple HTML file to Nginx default directory
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: '0644'
+
+    - name: Restart Nginx
+      systemd:
+        name: nginx
+        state: restarted
