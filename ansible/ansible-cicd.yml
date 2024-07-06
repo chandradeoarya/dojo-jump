@@ -16,11 +16,28 @@
         enabled: yes
         state: started
 
+    - name: Ensure the directory exists
+      file:
+        path: /var/www/html
+        state: directory
+
+    - name: Remove existing contents in /var/www/html
+      file:
+        path: /var/www/html
+        state: absent
+        recurse: yes
+
+    - name: Recreate /var/www/html directory
+      file:
+        path: /var/www/html
+        state: directory
+        
     - name: pull branch master
       git:
         repo: "{{ repo_url }}/{{ repo }}.git"
         dest: /var/www/html/
         accept_hostkey: yes
+
         
     - name: Restart Nginx
       systemd:
