@@ -16,14 +16,12 @@
         enabled: yes
         state: started
 
-    - name: Copy simple HTML file to Nginx default directory
-      copy:
-        src: {{ repo_dir }}
+    - name: pull branch master
+      git:
+        repo: "{{ repo_url }}/{{ repo }}.git"
         dest: /var/www/html/
-        owner: www-data
-        group: www-data
-        mode: '0644'
-
+        accept_hostkey: yes
+        
     - name: Restart Nginx
       systemd:
         name: nginx
