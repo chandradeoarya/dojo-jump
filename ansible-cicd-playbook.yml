@@ -15,7 +15,6 @@
     - name: Install Nginx
       apt:
         name: nginx
-        enabled: yes
         state: present
     
     - name: Get code from github 
