@@ -1,6 +1,9 @@
 name: CI/CD Pipeline
 
-on: [push]
+on:
+  push:
+    branches:
+      - ansible
 
 jobs:
   env-setup:
@@ -19,7 +22,7 @@ jobs:
         mkdir -p ~/.ssh
         echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa  
-        
+
   ansible:
     - name: Install Ansible
       run: pip install ansible
