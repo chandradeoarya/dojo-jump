@@ -27,5 +27,5 @@ jobs:
 
       - name: Run Ansible Playbook
         run: |
-          cd /home/ubuntu/dojo-jump/ansible
+          cd ansible
           ansible-playbook -i inventory ansible-cicd.yml

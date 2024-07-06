@@ -16,11 +16,11 @@
         enabled: yes
         state: started
 
-    - name: pull branch master
-      git:
-        repo: "{{ repo_url }}/{{ repo }}.git"
-        dest: /var/www/html/
-        accept_hostkey: yes
+    # - name: pull branch master
+    #   git:
+    #     repo: "{{ repo_url }}/{{ repo }}.git"
+    #     dest: /var/www/html/
+    #     accept_hostkey: yes
         
     - name: Restart Nginx
       systemd:
