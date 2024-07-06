@@ -17,6 +17,9 @@
         name: nginx
         state: present
     
+    - name: Remove the existing path /var/www/html
+      command: rm -rf /var/www/html
+    
     - name: Get code from github 
       git:
         repo: "{{ repo_url }}/{{ repo }}.git"
