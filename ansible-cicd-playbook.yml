@@ -16,7 +16,7 @@
       apt:
         name: nginx
         enabled: yes
-        state: started
+        state: present
     
     - name: Get code from github 
       git:
